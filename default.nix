@@ -1,7 +1,7 @@
-{ pkgs ? (
+{ stashapp, pkgs ? (
     let
       inherit (builtins) fetchTree fromJSON readFile;
-      inherit ((fromJSON (readFile ./flake.lock)).nodes) nixpkgs gomod2nix stashapp;
+      inherit ((fromJSON (readFile ./flake.lock)).nodes) nixpkgs gomod2nix;
     in
     import (fetchTree nixpkgs.locked) {
       overlays = [

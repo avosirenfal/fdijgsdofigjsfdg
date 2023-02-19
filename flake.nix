@@ -25,8 +25,8 @@
 
         in
         {
-          packages.default = pkgs.callPackage ./. { };
-          devShells.default = import ./shell.nix { inherit pkgs; };
+          packages.default = pkgs.callPackage ./. { inherit stashapp; };
+          devShells.default = import ./shell.nix { inherit pkgs; inherit stashapp; };
         })
     );
 }
