@@ -1,18 +1,16 @@
 { pkgs ? (
     let
       inherit (builtins) fetchTree fromJSON readFile;
-      inherit ((fromJSON (readFile ./flake.lock)).nodes) nixpkgs gomod2nix;
+      inherit ((fromJSON (readFile ./flake.lock)).nodes) nixpkgs;
     in
     import (fetchTree nixpkgs.locked) {
-      overlays = [
-        (import "${fetchTree gomod2nix.locked}/overlay.nix")
-      ];
+      overlays = [];
     }
   )
 }:
 
 with pkgs;
-buildGoModule rec {
+stdenv.mkDerivation rec {
   pname = "stashapp";
   version = "v0.19.0";
 
@@ -23,7 +21,19 @@ buildGoModule rec {
     sha256 = "sha256-oeQebasL1Y7/0JsVFxJLd4SSDkNe2m6rnkG49TmApXw=";
   };
 
-  vendorSha256 = null;
+  wrappedYarn = yarn.overrideAttrs (oldAttrs: {
+    buildInputs = oldAttrs.buildInputs or [] ++ [ makeBinaryWrapper ];
+    postInstall = oldAttrs.postInstall or "" + ''
+      wrapProgram $out/bin/yarn \
+        /*--add-flags "--global-folder /tmp/yarn --global-link /tmp/yarn2"*/
+        --append-flags "--help"
+    '';
+  });
+
+  buildInputs = [ go git wrappedYarn gcc gnumake ];
+  outputHashMode = "flat";
+  outputHashAlgo = "sha256";
+  outputHash = lib.fakeHash;
 
   meta = with lib; {
     description = "StashApp";
