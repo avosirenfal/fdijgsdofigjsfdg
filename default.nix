@@ -21,16 +21,19 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-oeQebasL1Y7/0JsVFxJLd4SSDkNe2m6rnkG49TmApXw=";
   };
 
-  wrappedYarn = yarn.overrideAttrs (oldAttrs: {
-    buildInputs = oldAttrs.buildInputs or [] ++ [ makeBinaryWrapper ];
-    postInstall = oldAttrs.postInstall or "" + ''
-      wrapProgram $out/bin/yarn \
-        /*--add-flags "--global-folder /tmp/yarn --global-link /tmp/yarn2"*/
-        --append-flags "--help"
-    '';
-  });
+  shellHook = ''
+  '';
+  preBuild = ''
+  export HOME="/tmp/yarn"
+  export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+  mkdir /tmp/yarn
+  yarn config set prefix /tmp/yarn
+  bash
+  '';
+  postBuild = ''
+  '';
 
-  buildInputs = [ go git wrappedYarn gcc gnumake ];
+  buildInputs = [ go git yarn gcc gnumake cacert ];
   outputHashMode = "flat";
   outputHashAlgo = "sha256";
   outputHash = lib.fakeHash;

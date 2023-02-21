@@ -11,7 +11,12 @@
 
 with pkgs;
 mkShell {
-  packages = [
-    go git yarn gcc gnumake
-  ];
+  shellHook = ''
+  export HOME="/tmp/yarn"
+  export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+  mkdir /tmp/yarn
+  yarn config set prefix /tmp/yarn
+  '';
+
+  packages = [ go git yarn gcc gnumake cacert ];
 }
