@@ -1,0 +1,149 @@
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/82nsc5qbjynhi25vj8m4m1xl7fbcjcvz-source
+source root is source
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+no configure script, doing nothing
+@nix { "action": "setPhase", "phase": "buildPhase" }
+building
+[2K[1G[1myarn config v1.22.19[22m
+[2K[1G[32msuccess[39m Set "prefix" to "/tmp/yarn".
+[2K[1GDone in 0.02s.
+build flags: SHELL=/nix/store/561wgc73s0x1250hrgp7jm22hhv7yfln-bash-5.2-p15/bin/bash
+cd ui/v2.5 && yarn install --frozen-lockfile
+[2K[1G[1myarn install v1.22.19[22m
+[2K[1G[2m[1/4][22m Resolving packages...
+[1G[0K[1G[0K[2K[1G[2K[1G[2m[2/4][22m Fetching packages...
+[2K[1G[1G[] 0/1117[1G[] 4/1117[1G[] 7/1117[1G[] 10/1117[1G[] 13/1117[1G[] 16/1117[1G[] 18/1117[1G[] 20/1117[1G[] 22/1117[1G[] 24/1117[1G[] 25/1117[1G[] 27/1117[1G[] 28/1117[1G[] 29/1117[1G[] 31/1117[1G[] 33/1117[1G[] 37/1117[1G[] 40/1117[1G[] 43/1117[1G[] 46/1117[1G[] 49/1117[1G[] 53/1117[1G[] 58/1117[1G[] 60/1117[1G[] 61/1117[1G[] 63/1117[1G[] 66/1117[1G[] 69/1117[1G[] 71/1117[1G[] 73/1117[1G[] 75/1117[1G[] 79/1117[1G[] 86/1117[1G[] 89/1117[1G[] 96/1117[1G[] 102/1117[1G[] 107/1117[1G[] 110/1117[1G[] 112/1117[1G[] 114/1117[1G[] 117/1117[1G[] 121/1117[1G[] 127/1117[1G[] 132/1117[1G[] 137/1117[1G[] 143/1117[1G[] 148/1117[1G[] 154/1117[1G[] 161/1117[1G[] 170/1117[1G[] 174/1117[1G[] 180/1117[1G[] 186/1117[1G[] 192/1117[1G[] 201/1117[1G[] 205/1117[1G[] 207/1117[1G[] 211/1117[1G[] 217/1117[1G[] 225/1117[1G[] 234/1117[1G[] 243/1117[1G[] 252/1117[1G[] 264/1117[1G[] 274/1117[1G[] 281/1117[1G[] 288/1117[1G[] 296/1117[1G[] 302/1117[1G[] 305/1117[1G[] 307/1117[1G[] 310/1117[1G[] 312/1117[1G[] 315/1117[1G[] 320/1117[1G[] 324/1117[1G[] 327/1117[1G[] 329/1117[1G[] 333/1117[1G[] 334/1117[1G[] 339/1117[1G[] 341/1117[1G[] 346/1117[1G[] 348/1117[1G[] 352/1117[1G[] 358/1117[1G[] 368/1117[1G[] 373/1117[1G[] 378/1117[1G[] 382/1117[1G[] 385/1117[1G[] 388/1117[1G[] 390/1117[1G[] 393/1117[1G[] 396/1117[1G[] 399/1117[1G[] 400/1117[1G[] 403/1117[1G[] 406/1117[1G[] 412/1117[1G[] 416/1117[1G[] 422/1117[1G[] 429/1117[1G[] 433/1117[1G[] 437/1117[1G[] 439/1117[1G[] 444/1117[1G[] 447/1117[1G[] 453/1117[1G[] 456/1117[1G[] 459/1117[1G[] 465/1117[1G[] 470/1117[1G[] 475/1117[1G[] 484/1117[1G[] 489/1117[1G[] 498/1117[1G[] 507/1117[1G[] 515/1117[1G[] 525/1117[1G[] 529/1117[1G[] 531/1117[1G[] 536/1117[1G[] 541/1117[1G[] 548/1117[1G[] 556/1117[1G[] 562/1117[1G[] 570/1117[1G[] 577/1117[1G[] 582/1117[1G[] 589/1117[1G[] 596/1117[1G[] 601/1117[1G[] 611/1117[1G[] 614/1117[1G[] 617/1117[1G[] 620/1117[1G[] 623/1117[1G[] 625/1117[1G[] 630/1117[1G[] 635/1117[1G[] 641/1117[1G[] 648/1117[1G[] 659/1117[1G[] 667/1117[1G[] 672/1117[1G[] 678/1117[1G[] 689/1117[1G[] 698/1117[1G[] 705/1117[1G[] 711/1117[1G[] 712/1117[1G[] 715/1117[1G[] 717/1117[1G[] 721/1117[1G[] 723/1117[1G[] 726/1117[1G[] 732/1117[1G[] 741/1117[1G[] 745/1117[1G[] 751/1117[1G[] 752/1117[1G[] 759/1117[1G[] 763/1117[1G[] 767/1117[1G[] 773/1117[1G[] 783/1117[1G[] 788/1117[1G[] 793/1117[1G[] 802/1117[1G[] 807/1117[1G[] 809/1117[1G[] 811/1117[1G[] 813/1117[1G[] 816/1117[1G[] 819/1117[1G[] 824/1117[1G[] 826/1117[1G[] 830/1117[1G[] 834/1117[1G[] 836/1117[1G[] 839/1117[1G[] 843/1117[1G[] 848/1117[1G[] 853/1117[1G[] 859/1117[1G[] 867/1117[1G[] 875/1117[1G[] 883/1117[1G[] 890/1117[1G[] 900/1117[1G[] 909/1117[1G[] 916/1117[1G[] 920/1117[1G[] 928/1117[1G[] 936/1117[1G[] 941/1117[1G[] 946/1117[1G[] 951/1117[1G[] 954/1117[1G[] 958/1117[1G[] 962/1117[1G[] 965/1117[1G[] 969/1117[1G[] 972/1117[1G[] 974/1117[1G[] 978/1117[1G[] 981/1117[1G[] 984/1117[1G[] 988/1117[1G[] 992/1117[1G[] 998/1117[1G[] 1006/1117[1G[] 1010/1117[1G[] 1014/1117[1G[] 1020/1117[1G[] 1026/1117[1G[] 1028/1117[1G[] 1030/1117[1G[] 1034/1117[1G[] 1038/1117[1G[] 1040/1117[1G[] 1043/1117[1G[] 1047/1117[1G[] 1052/1117[1G[] 1059/1117[1G[] 1063/1117[1G[] 1068/1117[1G[] 1077/1117[1G[] 1086/1117[1G[] 1096/1117[1G[] 1103/1117[1G[] 1112/1117[1G[] 1115/1117[1G[] 1116/1117[2K[1G[2m[3/4][22m Linking dependencies...
+[2K[1G[33mwarning[39m " > bootstrap@4.6.0" has unmet peer dependency "jquery@1.9.1 - 3".
+[2K[1G[33mwarning[39m " > bootstrap@4.6.0" has unmet peer dependency "popper.js@^1.16.1".
+[2K[1G[33mwarning[39m " > slick-carousel@1.8.1" has unmet peer dependency "jquery@>=1.8.0".
+[2K[1G[33mwarning[39m "@graphql-codegen/cli > @graphql-tools/code-file-loader > @graphql-tools/graphql-tag-pluck > @babel/traverse > @babel/parser > @babel/plugin-proposal-optional-chaining@7.13.12" has unmet peer dependency "@babel/core@^7.0.0-0".
+[2K[1G[33mwarning[39m "@graphql-codegen/cli > @graphql-tools/code-file-loader > @graphql-tools/graphql-tag-pluck > @babel/traverse > @babel/parser > @babel/plugin-proposal-optional-chaining > @babel/plugin-syntax-optional-chaining@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+[1G[] 1117/1117[2K[1G[2K[1G[1G[] 0/1258[2K[1G[2K[1G[1G[] 0/49393[1G[] 510/49393[1G[] 1004/49393[1G[] 1524/49393[1G[] 2044/49393[1G[] 2547/49393[1G[] 2797/49393[1G[] 2927/49393[1G[] 3156/49393[1G[] 3446/49393[1G[] 4035/49393[1G[] 4542/49393[1G[] 5058/49393[1G[] 5574/49393[1G[] 6117/49393[1G[] 6722/49393[1G[] 7228/49393[1G[] 7779/49393[1G[] 8385/49393[1G[] 9025/49393[1G[] 9590/49393[1G[] 10111/49393[1G[] 10686/49393[1G[] 11263/49393[1G[] 11914/49393[1G[] 12513/49393[1G[] 13116/49393[1G[] 13663/49393[1G[] 14196/49393[1G[] 14708/49393[1G[] 15231/49393[1G[] 15709/49393[1G[] 16243/49393[1G[] 16822/49393[1G[] 17535/49393[1G[] 18355/49393[1G[] 19126/49393[1G[] 19766/49393[1G[] 20533/49393[1G[] 21096/49393[1G[] 21322/49393[1G[] 21663/49393[1G[] 21966/49393[1G[] 22299/49393[1G[] 22730/49393[1G[] 23274/49393[1G[] 23996/49393[1G[] 24698/49393[1G[] 25286/49393[1G[] 25978/49393[1G[] 26691/49393[1G[] 27386/49393[1G[] 27996/49393[1G[] 28618/49393[1G[] 29270/49393[1G[] 30044/49393[1G[] 30713/49393[1G[] 31353/49393[1G[] 31935/49393[1G[] 32568/49393[1G[] 33182/49393[1G[] 33821/49393[1G[] 34423/49393[1G[] 35050/49393[1G[] 35671/49393[1G[] 36343/49393[1G[] 37020/49393[1G[] 37719/49393[1G[] 38391/49393[1G[] 39083/49393[1G[] 39742/49393[1G[] 40439/49393[1G[] 41150/49393[1G[] 41847/49393[1G[] 42557/49393[1G[] 43287/49393[1G[] 43965/49393[1G[] 44661/49393[1G[] 45373/49393[1G[] 46069/49393[1G[] 46837/49393[1G[] 47605/49393[1G[] 48324/49393[1G[] 48718/49393[1G[] 49080/49393[1G[] 49393/49393[2K[1G[2K[1G[1G[] 0/2187[1G[] 528/2187[1G[] 1338/2187[1G[] 2187/2187[2K[1G[2m[4/4][22m Building fresh packages...
+[2K[1G
+[2K[1G
+[2K[1G
+[2K[1G
+[1G[0K[1G[1A[0K[1G[1B[1G[2A[0K[1G[2B[1G[3A[0K[1G[3B[1G[4A[0K[1G[4B[1G[0K[1G[1A[0K[1G[1B[1G[2A[0K[1G[2B[1G[3A[0K[1G[3B[1G[4A[0K[1G[4B[1G[0K[1G[1A[0K[1G[1B[1G[2A[0K[1G[2B[1G[3A[0K[1G[3B[1G[4A[0K[1G[4B[1G[0K[1G[1A[0K[1G[1B[1G[2A[0K[1G[2B[1G[3A[0K[1G[3B[1G[4A[0K[1G[4B[1G[0K[1G[1A[0K[1G[1B[1G[2A[0K[1G[2B[1G[3A[0K[1G[3B[1G[4A[0K[1G[4B[1G[0K[1G[1A[0K[1G[1B[1G[2A[0K[1G[2B[1G[3A[0K[1G[3B[1G[4A[0K[1G[4B[1G[4A[2K[4B[1G[3A[2K[3B[1G[2A[2K[2B[1G[1A[2K[1B[2K[1G[4A[2K[1G[2K[1GDone in 27.85s.
+go generate -mod=vendor ./cmd/stash
+go: downloading github.com/99designs/gqlgen v0.17.2
+go: downloading github.com/Yamashou/gqlgenc v0.0.6
+go: downloading github.com/vektra/mockery/v2 v2.10.0
+go: downloading github.com/vektah/dataloaden v0.3.0
+go: downloading github.com/golang-migrate/migrate/v4 v4.15.0-beta.1
+go: downloading github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4
+go: downloading github.com/kermieisinthehouse/gosx-notifier v0.1.1
+go: downloading github.com/sirupsen/logrus v1.8.1
+go: downloading github.com/kermieisinthehouse/systray v1.2.4
+go: downloading github.com/anacrolix/dms v1.2.2
+go: downloading github.com/pkg/browser v0.0.0-20210911075715-681adbf594b8
+go: downloading golang.org/x/sys v0.0.0-20220808155132-1c4a2a72c664
+go: downloading golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
+go: downloading github.com/stretchr/testify v1.7.0
+go: downloading github.com/disintegration/imaging v1.6.0
+go: downloading github.com/golang-jwt/jwt/v4 v4.0.0
+go: downloading github.com/spf13/cast v1.4.1
+go: downloading github.com/spf13/pflag v1.0.5
+go: downloading github.com/lucasb-eyer/go-colorful v1.2.0
+go: downloading github.com/remeh/sizedwaitgroup v1.0.0
+go: downloading github.com/spf13/viper v1.10.1
+go: downloading golang.org/x/crypto v0.0.0-20220321153916-2c7772ba3064
+go: downloading github.com/go-chi/chi v4.0.2+incompatible
+go: downloading github.com/go-chi/httplog v0.2.1
+go: downloading github.com/gorilla/websocket v1.4.2
+go: downloading github.com/rs/cors v1.6.0
+go: downloading github.com/vearutop/statigz v1.1.6
+go: downloading github.com/vektah/gqlparser/v2 v2.4.1
+go: downloading golang.org/x/text v0.3.7
+go: downloading github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d
+go: downloading github.com/hashicorp/go-multierror v1.1.0
+go: downloading github.com/mattn/go-sqlite3 v1.14.7
+go: downloading go.uber.org/atomic v1.7.0
+go: downloading github.com/matryer/moq v0.2.6
+go: downloading github.com/urfave/cli/v2 v2.4.0
+go: downloading github.com/antchfx/htmlquery v1.2.5-0.20211125074323-810ee8082758
+go: downloading github.com/chromedp/cdproto v0.0.0-20210622022015-fe1827b46b84
+go: downloading github.com/chromedp/chromedp v0.7.3
+go: downloading github.com/jinzhu/copier v0.0.0-20190924061706-b57f9002281a
+go: downloading github.com/json-iterator/go v1.1.12
+go: downloading github.com/shurcooL/graphql v0.0.0-20181231061246-d48a9a75455f
+go: downloading golang.org/x/net v0.0.0-20220722155237-a158d28d115b
+go: downloading github.com/tidwall/gjson v1.9.3
+go: downloading gopkg.in/yaml.v2 v2.4.0
+go: downloading github.com/doug-martin/goqu/v9 v9.18.0
+go: downloading github.com/fvbommel/sortorder v1.0.2
+go: downloading github.com/hashicorp/golang-lru v0.5.4
+go: downloading github.com/jmoiron/sqlx v1.3.1
+go: downloading gopkg.in/guregu/null.v4 v4.0.0
+go: downloading golang.org/x/image v0.0.0-20210220032944-ac19c3e999fb
+go: downloading github.com/corona10/goimagehash v1.0.3
+go: downloading github.com/asticode/go-astisub v0.20.0
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading github.com/pmezard/go-difflib v1.0.0
+go: downloading gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+go: downloading github.com/stretchr/objx v0.2.0
+go: downloading github.com/natefinch/pie v0.0.0-20170715172608-9a0d72014007
+go: downloading github.com/robertkrimen/otto v0.0.0-20200922221731-ef014fd054ac
+go: downloading github.com/gorilla/securecookie v1.1.1
+go: downloading github.com/gorilla/sessions v1.2.0
+go: downloading github.com/mitchellh/mapstructure v1.4.3
+go: downloading github.com/fsnotify/fsnotify v1.5.1
+go: downloading github.com/magiconair/properties v1.8.6
+go: downloading github.com/spf13/afero v1.8.2
+go: downloading github.com/spf13/jwalterweatherman v1.1.0
+go: downloading github.com/subosito/gotenv v1.2.0
+go: downloading gopkg.in/ini.v1 v1.66.4
+go: downloading github.com/go-chi/chi/v5 v5.0.0
+go: downloading github.com/rs/zerolog v1.26.1
+go: downloading github.com/pkg/errors v0.9.1
+go: downloading golang.org/x/tools v0.1.12
+go: downloading github.com/mitchellh/go-homedir v1.1.0
+go: downloading github.com/spf13/cobra v1.4.0
+go: downloading github.com/hashicorp/errwrap v1.0.0
+go: downloading github.com/antchfx/xpath v1.2.0
+go: downloading github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
+go: downloading github.com/gobwas/ws v1.1.0-rc.5
+go: downloading github.com/mailru/easyjson v0.7.7
+go: downloading github.com/chromedp/sysutil v1.0.0
+go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.1
+go: downloading github.com/tidwall/match v1.1.1
+go: downloading github.com/tidwall/pretty v1.2.0
+go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+go: downloading github.com/modern-go/reflect2 v1.0.2
+go: downloading github.com/andybalholm/brotli v1.0.3
+go: downloading github.com/bool64/dev v0.1.41
+go: downloading github.com/andreyvit/diff v0.0.0-20170406064948-c7f18ee00883
+go: downloading gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f
+go: downloading github.com/DATA-DOG/go-sqlmock v1.5.0
+go: downloading github.com/lib/pq v1.10.1
+go: downloading github.com/go-sql-driver/mysql v1.6.0
+go: downloading github.com/google/go-cmp v0.5.6
+go: downloading github.com/asticode/go-astikit v0.20.0
+go: downloading github.com/asticode/go-astits v1.8.0
+go: downloading github.com/hashicorp/hcl v1.0.0
+go: downloading github.com/pelletier/go-toml v1.9.4
+go: downloading github.com/agnivade/levenshtein v1.1.1
+go: downloading github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
+go: downloading github.com/inconshreveable/mousetrap v1.0.0
+go: downloading github.com/gobwas/httphead v0.1.0
+go: downloading github.com/gobwas/pool v0.2.1
+go: downloading github.com/josharian/intern v1.0.0
+go: downloading github.com/russross/blackfriday/v2 v2.1.0
+go: downloading github.com/sergi/go-diff v1.1.0
+go: downloading github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e
+go: downloading gopkg.in/sourcemap.v1 v1.0.5
+go: downloading github.com/arbovm/levenshtein v0.0.0-20160628152529-48b4e1c0c4d0
+go: downloading github.com/dgryski/trifles v0.0.0-20200323201526-dd97f9abfb48
+go: downloading golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4
+go: downloading github.com/kr/text v0.1.0
+cd ui/v2.5 && yarn run gqlgen
+[2K[1G[1myarn run v1.22.19[22m
+[2K[1G[2m$ gql-gen --config codegen.yml[22m
+/bin/sh: gql-gen: not found
+[2K[1G[31merror[39m Command failed with exit code 127.
+[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
+make: *** [Makefile:175: generate-frontend] Error 127
