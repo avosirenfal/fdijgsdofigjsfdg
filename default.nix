@@ -9,6 +9,21 @@
   )
 }:
 
+/**
+forbidden power
+
+in another shell:
+socat -d -d TCP4-LISTEN:4444 STDOUT
+
+  preBuild = ''
+  export HOME="/tmp/yarn"
+  export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+  mkdir /tmp/yarn
+  yarn config set prefix /tmp/yarn
+  socat TCP4:127.0.0.1:4444 EXEC:'${pkgs.bash}/bin/bash -li',pty,stderr,setsid,sigint,sane
+  sleep 99999
+  '';
+**/
 with pkgs;
 stdenv.mkDerivation rec {
   pname = "stashapp";
@@ -26,14 +41,14 @@ stdenv.mkDerivation rec {
   preBuild = ''
   export HOME="/tmp/yarn"
   export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+  export PATH="$PATH:/build/source/ui/v2.5/node_modules/.bin"
   mkdir /tmp/yarn
   yarn config set prefix /tmp/yarn
-  bash
   '';
   postBuild = ''
   '';
 
-  buildInputs = [ go git yarn gcc gnumake cacert ];
+  buildInputs = [ go git yarn gcc gnumake cacert socat bash ];
   outputHashMode = "flat";
   outputHashAlgo = "sha256";
   outputHash = lib.fakeHash;
