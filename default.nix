@@ -36,22 +36,32 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-oeQebasL1Y7/0JsVFxJLd4SSDkNe2m6rnkG49TmApXw=";
   };
 
-  shellHook = ''
-  '';
-  preBuild = ''
+  dontInstall = true;
+  postConfigure = ''
   export HOME="/tmp/yarn"
   export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
-  export PATH="$PATH:/build/source/ui/v2.5/node_modules/.bin"
+  #export PATH="$PATH:/build/source/ui/v2.5/node_modules/.bin"
   mkdir /tmp/yarn
   yarn config set prefix /tmp/yarn
-  '';
-  postBuild = ''
+
+  make pre-ui
+  substituteInPlace /build/source/ui/v2.5/node_modules/.bin/gql-gen \
+    --replace "/usr/bin/env node" "${pkgs.nodejs}/bin/node"
+  substituteInPlace /build/source/ui/v2.5/node_modules/.bin/vite \
+    --replace "/usr/bin/env node" "${pkgs.nodejs}/bin/node"
+  #socat exec:'${pkgs.bash}/bin/bash -li',pty,stderr,setsid,sigint,sane tcp:127.0.0.1:4444
+  #sleep 99999
   '';
 
-  buildInputs = [ go git yarn gcc gnumake cacert socat bash ];
-  outputHashMode = "flat";
+  postBuild = ''
+  mkdir -p $out/bin
+  cp /build/source/stash $out/bin
+  '';
+
+  buildInputs = [ go git yarn gcc gnumake cacert nodejs ];
+  outputHashMode = "recursive";
   outputHashAlgo = "sha256";
-  outputHash = lib.fakeHash;
+  outputHash = "sha256-KkDoNLkJhgPXBaNKCPTIWCt2zm19LxF1eV9IQ9dNSzA=";
 
   meta = with lib; {
     description = "StashApp";
