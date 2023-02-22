@@ -40,7 +40,6 @@ stdenv.mkDerivation rec {
   postConfigure = ''
   export HOME="/tmp/yarn"
   export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
-  #export PATH="$PATH:/build/source/ui/v2.5/node_modules/.bin"
   mkdir /tmp/yarn
   yarn config set prefix /tmp/yarn
 
